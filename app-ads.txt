@@ -1,0 +1,4 @@
+google.com, pub-1472609237394607, DIRECT, f08c47fec0942fa0
+applovin.com, 26062, DIRECT, 5c616a0e8c0286b8
+unity3d.com, 1212331, DIRECT
+facebook.com, 123456789, DIRECT
