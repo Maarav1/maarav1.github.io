@@ -1,1 +1,13 @@
 
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.arina.cave",
+      "sha256_cert_fingerprints": [
+        "F1:18:00:B3:AD:7E:EC:A9:08:99:5F:EB:8E:CE:A2:53:C3:6B:C4:1D:5C:41:50:5B:D9:5D:B6:12:9C:6B:3E:A2"
+      ]
+    }
+  }
+]
