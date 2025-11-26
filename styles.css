@@ -1,0 +1,384 @@
+/* ===============================
+   ArinaCave Official Website CSS
+   Developer: Denis Marav
+   Version: 1.0
+   =============================== */
+
+/* -------------------------------
+   Reset & Base
+--------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  background-color: #f7f9fc;
+  line-height: 1.7;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* -------------------------------
+   Header
+--------------------------------*/
+header {
+  background: linear-gradient(120deg, #6a11cb, #2575fc);
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  font-size: 1.15rem;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+/* -------------------------------
+   Navigation
+--------------------------------*/
+nav {
+  background: #1a1f36;
+  padding: 0.9rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #4dabf7;
+}
+
+/* -------------------------------
+   Hero Section
+--------------------------------*/
+.hero-section {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  color: #fff;
+  text-align: center;
+  padding: 5rem 1rem 6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url('wave.svg') no-repeat bottom center / cover;
+  opacity: 0.5;
+}
+
+.hero-section h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  max-width: 650px;
+  margin: 0 auto 2rem;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  text-decoration: none;
+  padding: 14px 35px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.cta-btn.primary {
+  background: #2ecc71;
+  color: #fff;
+  box-shadow: 0 5px 20px rgba(46, 204, 113, 0.3);
+}
+
+.cta-btn.primary:hover {
+  background: #27ae60;
+  transform: translateY(-3px);
+}
+
+.cta-btn.secondary {
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+}
+
+.cta-btn.secondary:hover {
+  background: #fff;
+  color: #2575fc;
+}
+
+/* -------------------------------
+   Section Styles
+--------------------------------*/
+.section {
+  background: #fff;
+  margin: 4rem 0;
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #1a1f36;
+}
+
+.section p {
+  text-align: center;
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* -------------------------------
+   Download Section
+--------------------------------*/
+.download-card {
+  background: linear-gradient(180deg, #f9f9f9, #f0f7ff);
+  border-left: 5px solid #2575fc;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(37, 117, 252, 0.1);
+}
+
+.download-card h3 {
+  font-size: 1.6rem;
+  color: #1a1f36;
+  margin-bottom: 1rem;
+}
+
+.download-btn {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.download-btn.primary {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  color: #fff;
+  box-shadow: 0 5px 20px rgba(106, 17, 203, 0.2);
+}
+
+.download-btn.primary:hover {
+  background: linear-gradient(135deg, #1e63d1, #5a0fa7);
+  transform: translateY(-3px);
+}
+
+/* -------------------------------
+   Features Grid
+--------------------------------*/
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background: #f9fbfd;
+  border-left: 4px solid #6a11cb;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  color: #1a1f36;
+  margin-bottom: 0.8rem;
+}
+
+.feature-card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* -------------------------------
+   Developer / About
+--------------------------------*/
+#developer {
+  text-align: center;
+}
+
+#developer img {
+  border-radius: 12%;
+  margin-bottom: 1rem;
+  width: 320px;
+  height: 400px;
+  object-fit: cover;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.social-link {
+  display: inline-block;
+  background: #2575fc;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.social-link:hover {
+  background: #1e63d1;
+}
+
+/* -------------------------------
+   Footer
+--------------------------------*/
+footer {
+  background: #1a1f36;
+  color: #ccc;
+  padding: 3rem 0 1rem;
+  text-align: center;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-content h4 {
+  color: #fff;
+  margin-bottom: 0.8rem;
+}
+
+.footer-content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  border-top: 1px solid #2d3a57;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-bottom a {
+  color: #4dabf7;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* -------------------------------
+   Responsive Design
+--------------------------------*/
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-section h2 {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .download-card {
+    padding: 1.5rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Scroll Reveal Animation */
+.section, .feature-card, .download-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+.section.visible, .feature-card.visible, .download-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
