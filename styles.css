@@ -1,7 +1,7 @@
 /* ===============================
    ArinaCave Official Website CSS
    Developer: Denis Marav
-   Version: 1.0
+   Version: 3.0 - With SVG Icons
    =============================== */
 
 /* -------------------------------
@@ -139,6 +139,10 @@ nav a:hover {
   font-weight: 600;
   transition: all 0.3s ease;
   font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .cta-btn.primary {
@@ -164,6 +168,21 @@ nav a:hover {
 }
 
 /* -------------------------------
+   SVG Icons Styling
+--------------------------------*/
+.icon, .social-svg, .footer-svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.cta-btn .icon {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+/* -------------------------------
    Section Styles
 --------------------------------*/
 .section {
@@ -179,6 +198,16 @@ nav a:hover {
   font-size: 2.2rem;
   margin-bottom: 1rem;
   color: #1a1f36;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.section h2 .icon {
+  color: #6a11cb;
+  width: 1.5em;
+  height: 1.5em;
 }
 
 .section p {
@@ -203,16 +232,32 @@ nav a:hover {
   font-size: 1.6rem;
   color: #1a1f36;
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.download-card h3 .icon {
+  color: #6a11cb;
+  width: 1.3em;
+  height: 1.3em;
 }
 
 .download-btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   margin: 1rem 0;
   padding: 12px 30px;
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
+}
+
+.download-btn .icon {
+  width: 1.2em;
+  height: 1.2em;
 }
 
 .download-btn.primary {
@@ -224,6 +269,27 @@ nav a:hover {
 .download-btn.primary:hover {
   background: linear-gradient(135deg, #1e63d1, #5a0fa7);
   transform: translateY(-3px);
+}
+
+.download-card .file-info {
+  text-align: left;
+  font-size: 0.9rem;
+  color: #666;
+  margin: 1rem 0;
+}
+
+.download-card h4 {
+  margin-top: 1.5rem;
+  color: #1a1f36;
+}
+
+.download-card ol, .download-card ul {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.download-card li {
+  margin-bottom: 0.5rem;
 }
 
 /* -------------------------------
@@ -336,6 +402,238 @@ footer {
   text-decoration: underline;
 }
 
+/* ==================== NEW ADDITIONS ==================== */
+
+/* Large Social Icons Section */
+.social-icons-large-section {
+  background: linear-gradient(135deg, #f9f9f9, #f0f7ff);
+  margin: 4rem 0;
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.social-icons-large-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  color: #1a1f36;
+}
+
+.social-icons-large-section p {
+  text-align: center;
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.social-icons-large {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.social-icon-large {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  background: white;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #1a1f36;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+.social-icon-large:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  border-color: #6a11cb;
+}
+
+/* Social SVG Icons */
+.social-icons-large .social-svg {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.social-icon-large:hover .social-svg {
+  transform: scale(1.1);
+}
+
+/* Individual icon colors */
+.social-icon-large:hover .social-svg use[href="#youtube-icon"] {
+  fill: #FF0000;
+}
+
+.social-icon-large:hover .social-svg use[href="#instagram-icon"] {
+  fill: #E1306C;
+}
+
+.social-icon-large:hover .social-svg use[href="#twitter-icon"] {
+  fill: #1DA1F2;
+}
+
+.social-icon-large:hover .social-svg use[href="#github-icon"] {
+  fill: #333;
+}
+
+.social-icon-large:hover .social-svg use[href="#email-icon"] {
+  fill: #D44638;
+}
+
+.social-icon-large span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.social-icon-large.download-app-icon {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  color: white;
+  border: 2px solid #2575fc;
+}
+
+.social-icon-large.download-app-icon .social-svg {
+  fill: white;
+}
+
+.social-icon-large.download-app-icon:hover {
+  background: linear-gradient(135deg, #1e63d1, #5a0fa7);
+  border-color: #5a0fa7;
+}
+
+/* Enhanced Developer Section */
+.developer-enhanced .developer-description {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #333;
+  margin: 2rem 0;
+  text-align: left;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.developer-enhanced .developer-description p {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  border-left: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.developer-enhanced .developer-description p:hover {
+  border-left: 3px solid #6a11cb;
+  padding-left: 1.5rem;
+}
+
+/* ArinaCave Link in Developer Description */
+.arina-cave-link {
+  color: #6a11cb;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: linear-gradient(120deg, rgba(106, 17, 203, 0.1), rgba(37, 117, 252, 0.1));
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.arina-cave-link:hover {
+  color: #2575fc;
+  background: linear-gradient(120deg, rgba(106, 17, 203, 0.2), rgba(37, 117, 252, 0.2));
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(106, 17, 203, 0.2);
+}
+
+.arina-cave-link::after {
+  content: " ↓";
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+/* Small Social Icons in Footer */
+.social-icons-small {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.social-icons-small a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.social-icons-small a:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
+  border-color: #4dabf7;
+}
+
+/* Footer SVG icons */
+.social-icons-small .footer-svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+/* Color the icons on hover */
+.social-icons-small a:hover .footer-svg use[href="#youtube-icon"] {
+  fill: #FF0000;
+}
+
+.social-icons-small a:hover .footer-svg use[href="#instagram-icon"] {
+  fill: #E1306C;
+}
+
+.social-icons-small a:hover .footer-svg use[href="#twitter-icon"] {
+  fill: #1DA1F2;
+}
+
+.social-icons-small a:hover .footer-svg use[href="#github-icon"] {
+  fill: #333;
+}
+
+.social-icons-small a:hover .footer-svg use[href="#email-icon"] {
+  fill: #D44638;
+}
+
+/* Animation for social icons */
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.social-icon-large:nth-child(1) { animation: floatIcon 3s ease-in-out infinite; }
+.social-icon-large:nth-child(2) { animation: floatIcon 3s ease-in-out infinite 0.2s; }
+.social-icon-large:nth-child(3) { animation: floatIcon 3s ease-in-out infinite 0.4s; }
+.social-icon-large:nth-child(4) { animation: floatIcon 3s ease-in-out infinite 0.6s; }
+.social-icon-large:nth-child(5) { animation: floatIcon 3s ease-in-out infinite 0.8s; }
+.social-icon-large:nth-child(6) { animation: floatIcon 3s ease-in-out infinite 1s; }
+
 /* -------------------------------
    Responsive Design
 --------------------------------*/
@@ -350,6 +648,30 @@ footer {
 
   .section {
     padding: 2rem 1rem;
+  }
+  
+  .social-icon-large {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .social-icons-large .social-svg {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .social-icon-large span {
+    font-size: 0.9rem;
+  }
+  
+  .social-icons-large {
+    gap: 1rem;
+  }
+  
+  .section h2 {
+    font-size: 1.8rem;
+    flex-direction: column;
+    gap: 8px;
   }
 }
 
@@ -370,15 +692,52 @@ footer {
   .feature-card {
     padding: 1.5rem;
   }
+  
+  .social-icons-large {
+    gap: 0.8rem;
+  }
+  
+  .social-icon-large {
+    width: 85px;
+    height: 85px;
+  }
+  
+  .social-icons-large .social-svg {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 8px;
+  }
+  
+  .social-icon-large span {
+    font-size: 0.8rem;
+  }
+  
+  .developer-enhanced .developer-description {
+    font-size: 1rem;
+  }
+  
+  .social-icons-small {
+    gap: 0.8rem;
+  }
+  
+  .social-icons-small a {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .social-icons-small .footer-svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 /* Scroll Reveal Animation */
-.section, .feature-card, .download-card {
+.section, .feature-card, .download-card, .social-icons-large-section {
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.6s ease-out;
 }
-.section.visible, .feature-card.visible, .download-card.visible {
+.section.visible, .feature-card.visible, .download-card.visible, .social-icons-large-section.visible {
   opacity: 1;
   transform: translateY(0);
 }
