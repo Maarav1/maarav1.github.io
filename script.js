@@ -1,6 +1,7 @@
 // =========================
 //  ARINACAVE WEBSITE SCRIPT
 //  Author: Denis Marav
+//  Version: 3.0 - With SVG Icons
 //  =========================
 
 // Wait until the document is ready
@@ -31,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ===== Scroll Reveal Animations =====
-  const revealElements = document.querySelectorAll(".section, .feature-card, .download-card");
+  const revealElements = document.querySelectorAll(".section, .feature-card, .download-card, .social-icons-large-section");
   const revealOnScroll = () => {
     const windowHeight = window.innerHeight;
     revealElements.forEach(el => {
@@ -128,7 +129,12 @@ document.addEventListener("DOMContentLoaded", () => {
     navMenu.style.display = "none";
   }
 
-  // ===== Console Greeting (for developers) =====
+  // ===== Console Greeting =====
   console.log("%cWelcome to ArinaCave 🌧️", "color:#667eea; font-size:16px; font-weight:bold;");
   console.log("%cCrafted with care by Denis Marav", "color:#2ecc71; font-size:14px;");
+  console.log("%c📱 Connect with Denis Marav:", "color:#2575fc; font-size:14px; font-weight:bold;");
+  console.log("%cYouTube: https://youtube.com/@denismarav", "color:#FF0000;");
+  console.log("%cInstagram: https://www.instagram.com/denismarav", "color:#C13584;");
+  console.log("%cTwitter/X: https://x.com/denis_marav", "color:#1DA1F2;");
+  console.log("%cGitHub: https://github.com/Maarav1", "color:#333;");
 });
