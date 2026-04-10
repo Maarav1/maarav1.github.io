@@ -142,6 +142,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 })();
 
+  // Link inside developer section to open SupaCave modal
+const desktopLink = document.getElementById('supacaveDesktopLink');
+if (desktopLink) {
+  desktopLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    const modal = document.getElementById('supacaveModal');
+    if (modal) modal.style.display = 'flex';
+  });
+}
+
   window.addEventListener("resize", () => {
     if (window.innerWidth > 768) {
       navMenu.style.display = "flex";
