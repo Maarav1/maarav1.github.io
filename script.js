@@ -114,6 +114,34 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // SupaCave Modal
+(function() {
+  const modal = document.getElementById('supacaveModal');
+  const openBtn = document.getElementById('supacaveNavBtn');
+  const closeBtn = document.getElementById('closeSupacaveModal');
+  
+  if (openBtn) {
+    openBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (modal) modal.style.display = 'flex';
+    });
+  }
+  
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      if (modal) modal.style.display = 'none';
+    });
+  }
+  
+  if (modal) {
+    window.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  }
+})();
+
   window.addEventListener("resize", () => {
     if (window.innerWidth > 768) {
       navMenu.style.display = "flex";
