@@ -175,4 +175,5 @@ if (desktopLink) {
   console.log("%cInstagram: https://www.instagram.com/denismarav", "color:#C13584;");
   console.log("%cTwitter/X: https://x.com/denis_marav", "color:#1DA1F2;");
   console.log("%cGitHub: https://github.com/Maarav1", "color:#333;");
+  console.log("%cBlog: https://denismaravblog.blogspot.com/", "color:#4a6cf7;");
 });
