@@ -741,3 +741,22 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Blog link in developer section */
+.blog-link {
+  display: inline-block;
+  background: linear-gradient(135deg, #4a6cf7, #6a11cb);
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.blog-link:hover {
+  background: linear-gradient(135deg, #3a5cd7, #5a0fa7);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(106, 17, 203, 0.3);
+}
